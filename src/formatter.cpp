@@ -106,8 +106,8 @@ void highlight_code(FILE* in, FILE* out) {
 }
 
 int main() {
-    FILE* in = fopen("code/test1.sy", "r");
-    FILE* out = fopen("output/test1.html", "w");
+    FILE* in = fopen("code/test2.sy", "r");
+    FILE* out = fopen("output/test2-c.html", "w");
 
     if (!in || !out) {
         perror("文件打开失败");

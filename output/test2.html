@@ -1,12 +1,179 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body { background: #f8f8f8; font-family: monospace; line-height: 1.4; white-space: pre; }</style></head><body><pre><code>    <span style="color: blue; font-weight: bold;">int</span>&nbsp;<span style="color: blue; font-weight: bold;">const</span>&nbsp;<span style="color: black;">a</span>&nbsp;<span style="color: darkred;">=</span>&nbsp;<span style="color: darkorange;">0</span><span style="color: teal;">;</span>
-    <span style="color: blue; font-weight: bold;">const</span>&nbsp;<span style="color: blue; font-weight: bold;">int</span>&nbsp;<span style="color: black;">b</span>&nbsp;<span style="color: darkred;">=</span>&nbsp;<span style="color: black;">a</span>&nbsp;<span style="color: darkred;">+</span>&nbsp;<span style="color: darkorange;">1</span><span style="color: teal;">;</span>
-    
-    <span style="color: blue; font-weight: bold;">int</span>&nbsp;<span style="color: black;">main</span><span style="color: teal;">(</span><span style="color: teal;">)</span>&nbsp;<span style="color: teal;">{</span>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue; font-weight: bold;">int</span>&nbsp;<span style="color: black;">a</span>&nbsp;<span style="color: darkred;">=</span>&nbsp;<span style="color: darkorange;">5</span><span style="color: teal;">;</span>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue; font-weight: bold;">int</span>&nbsp;<span style="color: black;">frac</span>&nbsp;<span style="color: darkred;">=</span>&nbsp;<span style="color: darkorange;">1</span><span style="color: teal;">;</span>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: black;">for</span>&nbsp;<span style="color: teal;">(</span><span style="color: blue; font-weight: bold;">int</span>&nbsp;<span style="color: black;">i</span>&nbsp;<span style="color: darkred;">=</span>&nbsp;<span style="color: darkorange;">1</span><span style="color: teal;">;</span>&nbsp;<span style="color: black;">i</span>&nbsp;<span style="color: darkred;"><=</span>&nbsp;<span style="color: black;">a</span><span style="color: teal;">;</span>&nbsp;<span style="color: darkred;">+</span><span style="color: darkred;">+</span><span style="color: black;">i</span><span style="color: teal;">)</span>&nbsp;<span style="color: teal;">{</span>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: black;">frac</span>&nbsp;<span style="color: darkred;">*</span><span style="color: darkred;">=</span>&nbsp;<span style="color: black;">i</span><span style="color: teal;">;</span>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: teal;">}</span>
-    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue; font-weight: bold;">return</span>&nbsp;<span style="color: darkorange;">0</span><span style="color: teal;">;</span>
-    <span style="color: teal;">}</span>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+body { background: #f8f8f8; font-family: 'Courier New', monospace; padding: 1em; }
+.line { display: block; line-height: 1.2; white-space: pre; }
+.token-keyword { color: blue; font-weight: bold; }
+.token-identifier { color: black; }
+.token-number { color: darkorange; }
+.token-operator { color: darkred; }
+.token-separator { color: teal; }
+.token-comment { color: green; font-style: italic; }
+</style></head><body><pre><code>
+<span class="line">    <span class="token-comment"><em>// Á§∫‰æã SysY Á®ãÂ∫èÔºåÂåÖÂê´ÂèòÈáèÂ£∞Êòé„ÄÅÂáΩÊï∞Ë∞ÉÁî®„ÄÅÊéßÂà∂ÊµÅ„ÄÅÊï∞ÁªÑ„ÄÅÈÄíÂΩíÁ≠âÁâπÊÄß</em></span></span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">const</span> <span class="token-keyword">int</span> <span class="token-identifier">N</span> <span class="token-operator">=</span> <span class="token-number">10</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">global_var</span> <span class="token-operator">=</span> <span class="token-number">42</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">fib_cache</span> <span class="token-separator">[</span> <span class="token-number">100</span> <span class="token-separator">]</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">max</span> <span class="token-separator">(</span> <span class="token-keyword">int</span> <span class="token-identifier">a</span> <span class="token-separator">,</span> <span class="token-keyword">int</span> <span class="token-identifier">b</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">if</span> <span class="token-separator">(</span> <span class="token-identifier">a</span> <span class="token-operator">></span> <span class="token-identifier">b</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">a</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> <span class="token-keyword">else</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">b</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">factorial</span> <span class="token-separator">(</span> <span class="token-keyword">int</span> <span class="token-identifier">n</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">result</span> <span class="token-operator">=</span> <span class="token-number">1</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">while</span> <span class="token-separator">(</span> <span class="token-identifier">n</span> <span class="token-operator">></span> <span class="token-number">1</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">result</span> <span class="token-operator">=</span> <span class="token-identifier">result</span> <span class="token-operator">*</span> <span class="token-identifier">n</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">n</span> <span class="token-operator">=</span> <span class="token-identifier">n</span> <span class="token-operator">-</span> <span class="token-number">1</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">result</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">fibonacci</span> <span class="token-separator">(</span> <span class="token-keyword">int</span> <span class="token-identifier">n</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">if</span> <span class="token-separator">(</span> <span class="token-identifier">n</span> <span class="token-operator"><</span> <span class="token-operator">=</span> <span class="token-number">1</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">n</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> <span class="token-keyword">else</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">if</span> <span class="token-separator">(</span> <span class="token-identifier">fib_cache</span> <span class="token-separator">[</span> <span class="token-identifier">n</span> <span class="token-separator">]</span> <span class="token-operator">!</span> <span class="token-operator">=</span> <span class="token-operator">-</span> <span class="token-number">1</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">fib_cache</span> <span class="token-separator">[</span> <span class="token-identifier">n</span> <span class="token-separator">]</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">val</span> <span class="token-operator">=</span> <span class="token-identifier">fibonacci</span> <span class="token-separator">(</span> <span class="token-identifier">n</span> <span class="token-operator">-</span> <span class="token-number">1</span> <span class="token-separator">)</span> <span class="token-operator">+</span> <span class="token-identifier">fibonacci</span> <span class="token-separator">(</span> <span class="token-identifier">n</span> <span class="token-operator">-</span> <span class="token-number">2</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">fib_cache</span> <span class="token-separator">[</span> <span class="token-identifier">n</span> <span class="token-separator">]</span> <span class="token-operator">=</span> <span class="token-identifier">val</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">val</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">void</span> <span class="token-identifier">init_cache</span> <span class="token-separator">(</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">i</span> <span class="token-operator">=</span> <span class="token-number">0</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">while</span> <span class="token-separator">(</span> <span class="token-identifier">i</span> <span class="token-operator"><</span> <span class="token-number">100</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">fib_cache</span> <span class="token-separator">[</span> <span class="token-identifier">i</span> <span class="token-separator">]</span> <span class="token-operator">=</span> <span class="token-operator">-</span> <span class="token-number">1</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">i</span> <span class="token-operator">=</span> <span class="token-identifier">i</span> <span class="token-operator">+</span> <span class="token-number">1</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">sum_array</span> <span class="token-separator">(</span> <span class="token-keyword">int</span> <span class="token-identifier">arr</span> <span class="token-separator">[</span> <span class="token-separator">]</span> <span class="token-separator">,</span> <span class="token-keyword">int</span> <span class="token-identifier">size</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">sum</span> <span class="token-operator">=</span> <span class="token-number">0</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">i</span> <span class="token-operator">=</span> <span class="token-number">0</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">while</span> <span class="token-separator">(</span> <span class="token-identifier">i</span> <span class="token-operator"><</span> <span class="token-identifier">size</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">sum</span> <span class="token-operator">=</span> <span class="token-identifier">sum</span> <span class="token-operator">+</span> <span class="token-identifier">arr</span> <span class="token-separator">[</span> <span class="token-identifier">i</span> <span class="token-separator">]</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">i</span> <span class="token-operator">=</span> <span class="token-identifier">i</span> <span class="token-operator">+</span> <span class="token-number">1</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-identifier">sum</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">void</span> <span class="token-identifier">print_even</span> <span class="token-separator">(</span> <span class="token-keyword">int</span> <span class="token-identifier">arr</span> <span class="token-separator">[</span> <span class="token-separator">]</span> <span class="token-separator">,</span> <span class="token-keyword">int</span> <span class="token-identifier">size</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">i</span> <span class="token-operator">=</span> <span class="token-number">0</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">while</span> <span class="token-separator">(</span> <span class="token-identifier">i</span> <span class="token-operator"><</span> <span class="token-identifier">size</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">if</span> <span class="token-separator">(</span> <span class="token-identifier">arr</span> <span class="token-separator">[</span> <span class="token-identifier">i</span> <span class="token-separator">]</span> <span class="token-operator">%</span> <span class="token-number">2</span> <span class="token-operator">=</span> <span class="token-operator">=</span> <span class="token-number">0</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-comment"><em>// ÂÅ∂Êï∞ÊâìÂç∞</em></span></span>
+<span class="line">     </span>
+<span class="line">    <span class="token-operator">/</span> <span class="token-operator">*</span> <span class="token-unknown">Â</span> <span class="token-unknown">Æ</span> <span class="token-unknown">û</span> <span class="token-unknown">È</span> <span class="token-unknown">ô</span> <span class="token-unknown">Ö</span> <span class="token-unknown">Â</span> <span class="token-unknown">ú</span> <span class="token-unknown">∫</span> <span class="token-unknown">Ê</span> <span class="token-unknown">ô</span> <span class="token-unknown">Ø</span> <span class="token-unknown">‰</span> <span class="token-unknown">∏</span> <span class="token-unknown">≠</span> <span class="token-unknown">Â</span> <span class="token-unknown">è</span> <span class="token-unknown">Ø</span> <span class="token-unknown">‰</span> <span class="token-unknown">Ω</span> <span class="token-unknown">ø</span> <span class="token-unknown">Á</span> <span class="token-unknown">î</span> <span class="token-unknown">®</span> <span class="token-identifier">printf</span> <span class="token-unknown">Ô</span> <span class="token-unknown">º</span> <span class="token-unknown">å</span> <span class="token-unknown">Ë</span> <span class="token-unknown">ø</span> <span class="token-unknown">ô</span> <span class="token-unknown">È</span> <span class="token-unknown">á</span> <span class="token-unknown">å</span> <span class="token-unknown">‰</span> <span class="token-unknown">ª</span> <span class="token-unknown">Ö</span> <span class="token-unknown">Á</span> <span class="token-unknown">§</span> <span class="token-unknown">∫</span> <span class="token-unknown">Ê</span> <span class="token-unknown">Ñ</span> <span class="token-unknown">è</span> <span class="token-operator">*</span> <span class="token-operator">/</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">dummy</span> <span class="token-operator">=</span> <span class="token-identifier">arr</span> <span class="token-separator">[</span> <span class="token-identifier">i</span> <span class="token-separator">]</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">i</span> <span class="token-operator">=</span> <span class="token-identifier">i</span> <span class="token-operator">+</span> <span class="token-number">1</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">main</span> <span class="token-separator">(</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">a</span> <span class="token-operator">=</span> <span class="token-number">5</span> <span class="token-separator">,</span> <span class="token-identifier">b</span> <span class="token-operator">=</span> <span class="token-number">10</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">m</span> <span class="token-operator">=</span> <span class="token-identifier">max</span> <span class="token-separator">(</span> <span class="token-identifier">a</span> <span class="token-separator">,</span> <span class="token-identifier">b</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">f</span> <span class="token-operator">=</span> <span class="token-identifier">factorial</span> <span class="token-separator">(</span> <span class="token-number">6</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">init_cache</span> <span class="token-separator">(</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">fib10</span> <span class="token-operator">=</span> <span class="token-identifier">fibonacci</span> <span class="token-separator">(</span> <span class="token-number">10</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">arr</span> <span class="token-separator">[</span> <span class="token-number">5</span> <span class="token-separator">]</span> <span class="token-operator">=</span> <span class="token-separator">{</span> <span class="token-number">1</span> <span class="token-separator">,</span> <span class="token-number">2</span> <span class="token-separator">,</span> <span class="token-number">3</span> <span class="token-separator">,</span> <span class="token-number">4</span> <span class="token-separator">,</span> <span class="token-number">5</span> <span class="token-separator">}</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">int</span> <span class="token-identifier">s</span> <span class="token-operator">=</span> <span class="token-identifier">sum_array</span> <span class="token-separator">(</span> <span class="token-identifier">arr</span> <span class="token-separator">,</span> <span class="token-number">5</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">print_even</span> <span class="token-separator">(</span> <span class="token-identifier">arr</span> <span class="token-separator">,</span> <span class="token-number">5</span> <span class="token-separator">)</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">if</span> <span class="token-separator">(</span> <span class="token-identifier">s</span> <span class="token-operator">></span> <span class="token-number">10</span> <span class="token-separator">)</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">global_var</span> <span class="token-operator">=</span> <span class="token-identifier">global_var</span> <span class="token-operator">+</span> <span class="token-identifier">s</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> <span class="token-keyword">else</span> <span class="token-separator">{</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-identifier">global_var</span> <span class="token-operator">=</span> <span class="token-identifier">global_var</span> <span class="token-operator">-</span> <span class="token-identifier">s</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">     </span>
+<span class="line">    </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-keyword">return</span> <span class="token-number">0</span> <span class="token-separator">;</span> </span>
+<span class="line">     </span>
+<span class="line">    <span class="token-separator">}</span> </span>
+<span class="line">    </span>
 </code></pre></body></html>

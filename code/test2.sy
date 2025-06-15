@@ -1,0 +1,84 @@
+// 示例 SysY 程序，包含变量声明、函数调用、控制流、数组、递归等特性
+const int N = 10;
+int global_var = 42;
+int fib_cache[100];
+
+int max(int a, int b) {
+	if (a > b) {
+		return a;
+	} else {
+		return b;
+	}
+}
+
+int factorial(int n) {
+	int result = 1;
+	while (n > 1) {
+		result = result * n;
+		n = n - 1;
+	}
+	return result;
+}
+
+int fibonacci(int n) {
+	if (n <= 1) {
+		return n;
+	} else {
+		if (fib_cache[n] != -1) {
+			return fib_cache[n];
+		}
+		int val = fibonacci(n - 1) + fibonacci(n - 2);
+		fib_cache[n] = val;
+		return val;
+	}
+}
+
+void init_cache() {
+	int i = 0;
+	while (i < 100) {
+		fib_cache[i] = -1;
+		i = i + 1;
+	}
+}
+
+int sum_array(int arr[], int size) {
+	int sum = 0;
+	int i = 0;
+	while (i < size) {
+		sum = sum + arr[i];
+		i = i + 1;
+	}
+	return sum;
+}
+
+void print_even(int arr[], int size) {
+	int i = 0;
+	while (i < size) {
+		if (arr[i] % 2 == 0) {
+			// 偶数打印
+			/* 实际场景中可使用 printf，这里仅示意 */
+			int dummy = arr[i];
+		}
+		i = i + 1;
+	}
+}
+
+int main() {
+	int a = 5, b = 10;
+	int m = max(a, b);
+	int f = factorial(6);
+	init_cache();
+	int fib10 = fibonacci(10);
+
+	int arr[5] = {1, 2, 3, 4, 5};
+	int s = sum_array(arr, 5);
+	print_even(arr, 5);
+
+	if (s > 10) {
+		global_var = global_var + s;
+	} else {
+		global_var = global_var - s;
+	}
+
+	return 0;
+}

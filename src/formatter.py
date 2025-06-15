@@ -65,8 +65,8 @@ def generate_html(input_path: Path, output_path: Path):
 
 # 主流程
 if __name__ == '__main__':
-    input_file = Path('../code/test1.sy')
-    output_file = Path('../output/test2.html')
+    input_file = Path('../code/test2.sy')
+    output_file = Path('../output/test2-py.html')
     output_file.parent.mkdir(parents=True, exist_ok=True)
     generate_html(input_file, output_file)
     print(f"已生成高亮 HTML: {output_file}")
