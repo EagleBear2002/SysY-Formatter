@@ -1,3 +1,4 @@
+// simple SysY code demo
 int const a = 0;
 const int b = a + 1;
 
